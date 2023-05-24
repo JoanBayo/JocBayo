@@ -644,7 +644,7 @@ function playerHit(player) {
             fondo.pause()
         }catch (e){
         }
-    } else if (player.y+50 < this.monster.y){
+    } else if (player.y+64 < this.monster.y){
         mataMonstre = this.sound.add('mataMonstre', {loop: false});
         mataMonstre.volume = 1
         mataMonstre.play();
@@ -654,7 +654,7 @@ function playerHit(player) {
         this.physics.pause();
         player.setY(this.player.y - 500);
         lives--
-        livesText.setText('❤ : ' + lives);
+        livesText.setText('❤️: ' + lives);
         // Set velocity back to 0
         player.setVelocity(0, 0);
         // Put the player back in its original position
